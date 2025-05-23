@@ -39,7 +39,7 @@ export default function Home() {
         {/* New full-screen intro section */}
         <section className={styles.intro}>
           <div className={styles.introText}>
-            <h1>Inspired by William Eggleston</h1>
+            <h1 className={styles.heading}>Inspired by William Eggleston</h1>
             <p>
               William Eggleston (b. 1939) is a groundbreaking American
               photographer who helped establish color photography as fine art.
@@ -102,7 +102,7 @@ export default function Home() {
         </section>
         <section className={styles.intro}>
           <div className={styles.introText}>
-            <h2>A response by Gregory Noack</h2>
+            <h2 className={styles.heading}>A response by Gregory Noack</h2>
             <p>
               I’m drawn to the way William Eggleston finds beauty in the
               mundane. In the following images, I’ve tried to echo his color sensibility and unflinching

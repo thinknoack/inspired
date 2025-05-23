@@ -19,14 +19,13 @@
   width: 100%;
 }
 
-h1.heading {
-  display: block;
-  font-size: 100px;
-  font-weight: 100;
-  /* text-transform: uppercase; */
-  letter-spacing: -8px;
-  font-style: italic;
+.heading {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
 }
+
 
 .intro {
   height: 100vh;
@@ -59,10 +58,11 @@ h1.heading {
   background-color: #101010bc;
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 0;
     text-align: center;
     color: #fff;
+    text-transform: uppercase;
   }
   p {
     font-size: 1.5rem;
