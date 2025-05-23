@@ -3,9 +3,9 @@ import styles from "./page.module.scss";
 import ParallaxImage from "./components/ParallaxImage";
 
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 export default function Home() {
 
-const basePath = "/inspired";
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -37,7 +37,7 @@ const basePath = "/inspired";
             <div className={styles.images}>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}we/red.jpg`}
+                  src={`${basePath}/we/red.jpg`}
                   alt="Tricycle placeholder"
                   width={1600}
                   height={1400}
@@ -49,7 +49,7 @@ const basePath = "/inspired";
               </div>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}we/car2.jpg`}
+                  src={`${basePath}/we/car2.jpg`}
                   alt="Sidewalk placeholder"
                   width={1600}
                   height={1400}
@@ -73,7 +73,7 @@ const basePath = "/inspired";
             <div className={styles.images}>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}we/bike.jpg`}
+                  src={`${basePath}/we/bike.jpg`}
                   alt="Tricycle placeholder"
                   width={1600}
                   height={1400}
@@ -85,7 +85,7 @@ const basePath = "/inspired";
               </div>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}we/car3.jpg`}
+                  src={`${basePath}/we/car3.jpg`}
                   alt="Sidewalk placeholder"
                   width={1600}
                   height={1400}
