@@ -2,10 +2,10 @@
 "use client";
 
 import { useRef, useEffect, useState, useCallback } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface ParallaxProps {
-  src: string;
+  src: string | StaticImageData; 
   alt: string;
   width: number;
   height: number;

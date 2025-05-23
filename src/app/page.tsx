@@ -2,6 +2,25 @@
 import styles from "./page.module.scss";
 import ParallaxImage from "./components/ParallaxImage";
 
+import wered from '../../public/we/red.jpg'
+import wecar2 from '../../public/we/car2.jpg'
+import webike from '../../public/we/bike.jpg'
+import wecar3 from '../../public/we/car3.jpg'
+import red from '../../public/red.jpg'
+import sit from '../../public/sit.jpg'
+import zebra from '../../public/zebra.jpg'
+import car from '../../public/car.jpg'
+import work1 from '../../public/work1.jpg'
+import work2 from '../../public/work2.jpg'
+import sign1 from '../../public/sign1.jpg'
+import sign2 from '../../public/sign2.jpg'
+import haul1 from '../../public/haul1.jpg'
+import haul2 from '../../public/haul2.jpg'
+import wall from '../../public/wall.jpg'
+import polls1 from '../../public/polls1.jpg'
+import polls2 from '../../public/polls2.jpg'
+// import self from '../../public/self.jpg'
+// import leave from '../../public/leave.jpg'
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -38,7 +57,7 @@ export default function Home() {
             <div className={styles.images}>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}/we/red.jpg`}
+                  src={wered}
                   alt="Tricycle placeholder"
                   width={1600}
                   height={1400}
@@ -51,7 +70,7 @@ export default function Home() {
               </div>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}/we/car2.jpg`}
+                  src={wecar2}
                   alt="Sidewalk placeholder"
                   width={1600}
                   height={1400}
@@ -76,7 +95,7 @@ export default function Home() {
             <div className={styles.images}>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}/we/bike.jpg`}
+                  src={webike}
                   alt="Tricycle placeholder"
                   width={1600}
                   height={1400}
@@ -88,7 +107,7 @@ export default function Home() {
               </div>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}/we/car3.jpg`}
+                  src={wecar3}
                   alt="Sidewalk placeholder"
                   width={1600}
                   height={1400}
@@ -116,7 +135,7 @@ export default function Home() {
           <div>
             <div className={styles.image}>
               <ParallaxImage
-                src={`${basePath}/red.jpg`}
+                src={red}
                 alt="Picture of a car near the train tracks"
                 width={1600}
                 height={1400}
@@ -134,7 +153,7 @@ export default function Home() {
             <div className={styles.images}>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}/sit.jpg`}
+                  src={sit}
                   alt="Tricycle placeholder"
                   width={1600}
                   height={1400}
@@ -146,7 +165,7 @@ export default function Home() {
               </div>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}/zebra.jpg`}
+                  src={zebra}
                   alt="Sidewalk placeholder"
                   width={1600}
                   height={1400}
@@ -164,7 +183,7 @@ export default function Home() {
           <div>
             <div className={styles.image}>
               <ParallaxImage
-                src={`${basePath}/car.jpg`}
+                src={car}
                 alt="Picture of a car near the train tracks"
                 width={1600}
                 height={1400}
@@ -182,7 +201,7 @@ export default function Home() {
             <div className={styles.images}>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}/work1.jpg`}
+                  src={work1}
                   alt="Tricycle placeholder"
                   width={1600}
                   height={1400}
@@ -194,7 +213,7 @@ export default function Home() {
               </div>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}/work2.jpg`}
+                  src={work2}
                   alt="Sidewalk placeholder"
                   width={1600}
                   height={1400}
@@ -213,7 +232,7 @@ export default function Home() {
             <div className={styles.images}>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}/sign1.jpg`}
+                  src={sign1}
                   alt="Tricycle placeholder"
                   width={1600}
                   height={1400}
@@ -225,7 +244,7 @@ export default function Home() {
               </div>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}/sign2.jpg`}
+                  src={sign2}
                   alt="Sidewalk placeholder"
                   width={1600}
                   height={1400}
@@ -244,7 +263,7 @@ export default function Home() {
             <div className={styles.images}>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}/haul1.jpg`}
+                  src={haul1}
                   alt="Tricycle placeholder"
                   width={1600}
                   height={1400}
@@ -256,7 +275,7 @@ export default function Home() {
               </div>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}/haul2.jpg`}
+                  src={haul2}
                   alt="Sidewalk placeholder"
                   width={1600}
                   height={1400}
@@ -274,7 +293,7 @@ export default function Home() {
           <div>
             <div className={styles.image}>
               <ParallaxImage
-                src={`${basePath}/wall.jpg`}
+                src={wall}
                 alt="Picture of a car near the train tracks"
                 width={1600}
                 height={1400}
@@ -293,7 +312,7 @@ export default function Home() {
             <div className={styles.images}>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}/polls1.jpg`}
+                  src={polls1}
                   alt="Tricycle placeholder"
                   width={1600}
                   height={1400}
@@ -305,7 +324,7 @@ export default function Home() {
               </div>
               <div className={styles.image}>
                 <ParallaxImage
-                  src={`${basePath}/polls2.jpg`}
+                  src={polls2}
                   alt="Sidewalk placeholder"
                   width={1600}
                   height={1400}
@@ -324,7 +343,7 @@ export default function Home() {
             <div className={styles.images}>
             <div className={styles.image}>
               <ParallaxImage
-                src={`${basePath}/self.jpg`}
+                src={self}
                 alt="Tricycle placeholder"
                 width={1600}
                 height={1400}
@@ -336,7 +355,7 @@ export default function Home() {
             </div>
             <div className={styles.image}>
               <ParallaxImage
-                src={`${basePath}/leave.jpg`}
+                src={leave}
                 alt="Sidewalk placeholder"
                 width={1600}
                 height={1400}
