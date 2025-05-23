@@ -96,8 +96,6 @@ export default function ParallaxImage({
         transform: `translateY(${translateY}px) translateX(${translateX}px)`,
         transition: "transform 0.3s linear",
         willChange: "transform",
-        width: "100%",
-        height: "auto",
       }}
       sizes={sizes}
       className={className}
