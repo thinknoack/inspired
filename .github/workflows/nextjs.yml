@@ -25,7 +25,21 @@ jobs:
 
       - name: Detect package manager
         id: detect-package-manager
-        # ... (no change here)
+        run: |
+          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
+            echo "manager=yarn" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT # Changed command to install for consistency with frozen-lockfile
+            echo "runner=yarn" >> $GITHUB_OUTPUT
+            exit 0
+          elif [ -f "${{ github.workspace }}/package.json" ]; then
+            echo "manager=npm" >> $GITHUB_OUTPUT
+            echo "command=ci" >> $GITHUB_OUTPUT
+            echo "runner=npx --no-install" >> $GITHUB_OUTPUT
+            exit 0
+          else
+            echo "Unable to determine package manager"
+            exit 1
+          fi
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -38,7 +52,7 @@ jobs:
         with:
           static_site_generator: next
 
-      - name: Restore cache # Keep this, it helps speed up subsequent runs
+      - name: Restore cache
         uses: actions/cache@v4
         with:
           path: |
@@ -48,12 +62,12 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
 
       - name: Clean Yarn cache (Optional, but can help with stubborn issues)
-        # Only run if yarn is detected
+        # The 'if' condition is directly on the step.
         if: steps.detect-package-manager.outputs.manager == 'yarn'
         run: yarn cache clean
 
       - name: Install dependencies
-        # Use --frozen-lockfile to ensure exact reproducibility from yarn.lock
+        # The 'run' command is a multiline string.
         run: |
           if [ "${{ steps.detect-package-manager.outputs.manager }}" == "yarn" ]; then
             yarn install --frozen-lockfile
