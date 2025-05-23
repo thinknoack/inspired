@@ -71,6 +71,7 @@ export default function Home() {
                     xParallaxAmount={0}
                     startViewportFromBottom={0}
                     endViewportFromTop={0}
+                    priority={true}
                   />
               </div>
           </div>
@@ -94,6 +95,7 @@ export default function Home() {
                   xParallaxAmount={0}
                   startViewportFromBottom={0}
                   endViewportFromTop={0}
+                  priority={true}
                 />
               </div>
         </div>
