@@ -10,7 +10,7 @@ import red from '../../public/red.jpg'
 import sit from '../../public/sit.jpg'
 import zebra from '../../public/zebra.jpg'
 import car from '../../public/car.jpg'
-import work1 from '../../public/work1.jpg'
+import gas from '../../public/work1.jpg'
 import work2 from '../../public/work2.jpg'
 import sign1 from '../../public/sign1.jpg'
 import sign2 from '../../public/sign2.jpg'
@@ -130,23 +130,6 @@ export default function Home() {
             </p>
           </div>
         </section>
-        {/* red */}
-        <section className={styles.section}>
-          <div>
-            <div className={styles.image}>
-              <ParallaxImage
-                src={red}
-                alt="Picture of a car near the train tracks"
-                width={1600}
-                height={1400}
-                yParallaxAmount={-200}
-                xParallaxAmount={0}
-                startViewportFromBottom={0}
-                endViewportFromTop={0}
-              />
-            </div>
-          </div>
-        </section>
         {/* sit */}
         <section className={`${styles.section} ${styles.double}`}>
           <div>
@@ -195,37 +178,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* work */}
-        <section className={`${styles.section} ${styles.double}`}>
-          <div>
-            <div className={styles.images}>
-              <div className={styles.image}>
-                <ParallaxImage
-                  src={work1}
-                  alt="Tricycle placeholder"
-                  width={1600}
-                  height={1400}
-                  yParallaxAmount={-200}
-                  xParallaxAmount={0}
-                  startViewportFromBottom={0}
-                  endViewportFromTop={0}
-                />
-              </div>
-              <div className={styles.image}>
-                <ParallaxImage
-                  src={work2}
-                  alt="Sidewalk placeholder"
-                  width={1600}
-                  height={1400}
-                  yParallaxAmount={-200}
-                  xParallaxAmount={0}
-                  startViewportFromBottom={0}
-                  endViewportFromTop={0}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
         {/* signs */}
         <section className={`${styles.section} ${styles.double}`}>
           <div>
@@ -257,6 +209,41 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* Work */}
+        <section className={styles.section}>
+          <div>
+            <div className={styles.image}>
+              <ParallaxImage
+                src={work2}
+                alt="Picture of a car near the train tracks"
+                width={1600}
+                height={1400}
+                yParallaxAmount={-200}
+                xParallaxAmount={0}
+                startViewportFromBottom={0}
+                endViewportFromTop={0}
+              />
+            </div>
+          </div>
+        </section>
+         {/* gas */}
+        <section className={styles.section}>
+          <div>
+            <div className={styles.image}>
+              <ParallaxImage
+                src={gas}
+                alt="Picture of a car near the train tracks"
+                width={1600}
+                height={1400}
+                yParallaxAmount={-200}
+                xParallaxAmount={0}
+                startViewportFromBottom={0}
+                endViewportFromTop={0}
+              />
+            </div>
+          </div>
+        </section>
+        
         {/* haul */}
         <section className={`${styles.section} ${styles.double}`}>
           <div>
@@ -306,6 +293,8 @@ export default function Home() {
           </div>
         </section>
 
+
+
         {/* polls */}
         <section className={`${styles.section} ${styles.double}`}>
           <div>
@@ -337,7 +326,23 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        {/* red */}
+        <section className={styles.section}>
+          <div>
+            <div className={styles.image}>
+              <ParallaxImage
+                src={red}
+                alt="Picture of a car near the train tracks"
+                width={1600}
+                height={1400}
+                yParallaxAmount={-200}
+                xParallaxAmount={0}
+                startViewportFromBottom={0}
+                endViewportFromTop={0}
+              />
+            </div>
+          </div>
+        </section>
         {/* <section className={`${styles.section} ${styles.double}`}>
           <div>
             <div className={styles.images}>
