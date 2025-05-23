@@ -101,7 +101,7 @@ h1.heading {
 
   &:not(.double) {
     .image {
-      max-width: 80%;
+      max-width: 79%;
       width: 2000px;
       margin: 0 auto;
     }
@@ -126,7 +126,7 @@ h1.heading {
         width: 100%;
         height: auto;
         border: 20px solid #fff;
-        max-height: 85vh;
+        max-height: 100vh;
       }
 
       &:first-child img {
