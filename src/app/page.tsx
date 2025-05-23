@@ -14,15 +14,11 @@ import wall from '../../public/set/wall.jpg'
 import cross from '../../public/set/cross.jpg'
 
 
-import haul from '../../public/set/haul.jpg'
-
-
 import sit from '../../public/set/sit-work.jpg'
 import signs from '../../public/set/signs.jpg'
 import polls from '../../public/set/polls.jpg'
 
-// import self from '../../public/self.jpg'
-// import leave from '../../public/leave.jpg'
+
 
 // const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -215,23 +211,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* haul */}
-        <section className={styles.section}>
-          <div>
-            <div className={styles.image}>
-              <ParallaxImage
-                src={haul}
-                alt="Picture of a car near the train tracks"
-                width={doublehw}
-                height={doublehh}
-                yParallaxAmount={-200}
-                xParallaxAmount={0}
-                startViewportFromBottom={0}
-                endViewportFromTop={0}
-              />
-            </div>
-          </div>
-        </section>
+
         {/* wall */}
         <section className={styles.section}>
           <div>
@@ -286,6 +266,10 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+
+
+
         {/* <section className={`${styles.section} ${styles.double}`}>
           <div>
             <div className={styles.images}>
@@ -317,7 +301,7 @@ export default function Home() {
           </div>
         </section> */}
 
-        <section className={styles.intro}>
+        <section className={styles.intro} style={{ marginTop: '100px' }}>
           <div className={styles.introText}>
             <h2>Thank you</h2>
           </div>
