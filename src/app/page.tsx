@@ -4,6 +4,7 @@ import ParallaxImage from "./components/ParallaxImage";
 
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+console.log('baseP', basePath)
 export default function Home() {
 
   return (

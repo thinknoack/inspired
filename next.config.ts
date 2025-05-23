@@ -5,7 +5,6 @@ const isProd = process.env.NODE_ENV === 'production';
 const basePath = isProd ? '/inspired' : '';
 const assetPrefix = isProd ? '/inspired' : '';
 
-console.log(isProd)
 
 const nextConfig: NextConfig = {
   basePath,
