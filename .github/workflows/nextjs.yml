@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NODE_ENV: production  # ← Set it globally for the job
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -62,8 +64,8 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
-      - name: Build with Yarn (production)
-        run: yarn build
+      - name: Build with Next.js (static export)
+        run: ${{ steps.detect-package-manager.outputs.runner }} build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
