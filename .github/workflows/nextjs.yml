@@ -74,8 +74,21 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        # Explicitly set ASSET_PREFIX for the build command
         run: ASSET_PREFIX=/inspired ${{ steps.detect-package-manager.outputs.runner }} next build
+
+      - name: Debug 'out' directory contents (CRUCIAL DEBUGGING STEP)
+        run: |
+          echo "--- Listing 'out' directory contents ---"
+          ls -R ./out
+          echo ""
+          echo "--- Checking index.html for image paths (look for 'inspired') ---"
+          # Attempt to find image src attributes in the main index.html
+          # This command tries to print lines that contain 'src=' and image names
+          grep -E 'src="[^"]*\.(jpg|png|gif|webp)"' ./out/index.html || echo "No image src attributes found in index.html, or grep failed."
+          echo ""
+          echo "--- Displaying full index.html content (for thorough inspection) ---"
+          cat ./out/index.html
+          echo "----------------------------------------------------"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
