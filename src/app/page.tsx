@@ -22,7 +22,7 @@ import polls2 from '../../public/polls2.jpg'
 // import self from '../../public/self.jpg'
 // import leave from '../../public/leave.jpg'
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+// const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Home() {
 
