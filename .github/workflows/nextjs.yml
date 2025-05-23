@@ -18,28 +18,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NODE_ENV: production  # ← Set it globally for the job
+      NODE_ENV: production
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Detect package manager
         id: detect-package-manager
-        run: |
-          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
-            echo "manager=yarn" >> $GITHUB_OUTPUT
-            echo "command=install" >> $GITHUB_OUTPUT
-            echo "runner=yarn" >> $GITHUB_OUTPUT
-            exit 0
-          elif [ -f "${{ github.workspace }}/package.json" ]; then
-            echo "manager=npm" >> $GITHUB_OUTPUT
-            echo "command=ci" >> $GITHUB_OUTPUT
-            echo "runner=npx --no-install" >> $GITHUB_OUTPUT
-            exit 0
-          else
-            echo "Unable to determine package manager"
-            exit 1
-          fi
+        # ... (no change here)
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -52,7 +38,7 @@ jobs:
         with:
           static_site_generator: next
 
-      - name: Restore cache
+      - name: Restore cache # Keep this, it helps speed up subsequent runs
         uses: actions/cache@v4
         with:
           path: |
@@ -61,8 +47,19 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
 
+      - name: Clean Yarn cache (Optional, but can help with stubborn issues)
+        # Only run if yarn is detected
+        if: steps.detect-package-manager.outputs.manager == 'yarn'
+        run: yarn cache clean
+
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        # Use --frozen-lockfile to ensure exact reproducibility from yarn.lock
+        run: |
+          if [ "${{ steps.detect-package-manager.outputs.manager }}" == "yarn" ]; then
+            yarn install --frozen-lockfile
+          else
+            npm ci
+          fi
 
       - name: Build with Next.js (static export)
         run: ${{ steps.detect-package-manager.outputs.runner }} build
