@@ -15,6 +15,7 @@ interface ParallaxProps {
   endViewportFromTop?: number;
   sizes?: string;
   className?: string;
+  priority?: boolean;
 }
 
 export default function ParallaxImage({
@@ -28,6 +29,7 @@ export default function ParallaxImage({
   endViewportFromTop = 0,
   sizes,
   className,
+  priority
 }: ParallaxProps) {
   const imageRef = useRef<HTMLImageElement>(null);
   const [translateY, setTranslateY] = useState(0);
@@ -100,6 +102,7 @@ export default function ParallaxImage({
       sizes={sizes}
       className={className}
       unoptimized
+      priority
     />
   );
 }
