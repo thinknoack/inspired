@@ -102,7 +102,7 @@ export default function ParallaxImage({
       sizes={sizes}
       className={className}
       unoptimized
-      priority
+      priority={priority}
     />
   );
 }

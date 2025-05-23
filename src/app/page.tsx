@@ -51,7 +51,7 @@ export default function Home() {
                   xParallaxAmount={0}
                   startViewportFromBottom={0}
                   endViewportFromTop={0}
-                  priority
+                  priority={true}
                 />
               </div>
               <div className={styles.image}>
@@ -64,7 +64,7 @@ export default function Home() {
                   xParallaxAmount={0}
                   startViewportFromBottom={0}
                   endViewportFromTop={0}
-                  priority
+                  priority={true}
                 />
               </div>
             </div>
