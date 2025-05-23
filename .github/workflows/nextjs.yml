@@ -74,11 +74,14 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        # Explicitly set ASSET_PREFIX for the build command
+        run: ASSET_PREFIX=/inspired ${{ steps.detect-package-manager.outputs.runner }} next build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
+
 
   # Deployment job
   deploy:
