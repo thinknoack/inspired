@@ -9,7 +9,7 @@
   align-items: center;
   flex-direction: column;
   background-color: #a9b5b8;
-    background-image: url("../../public/pattern.webp");
+    background-image: url("../../public/webb-dark.png");
   background-repeat: repeat; /* or 'no-repeat', 'repeat-x', etc. */
   background-size: auto; /* or 'cover', 'contain', etc. */
   background-position: top left; /* adjust as needed */
@@ -33,8 +33,9 @@ h1.heading {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
+    background-color: #fff;
   padding: 2rem;
+  
 }
 
 .introText {
@@ -55,15 +56,19 @@ h1.heading {
   justify-content: center;
   padding: 50px;
   min-height: 80vh;
+  background-color: #101010bc;
+
   h2 {
     font-size: 2rem;
     margin-bottom: 0;
     text-align: center;
+    color: #fff;
   }
   p {
     font-size: 1.5rem;
     line-height: 1.7;
     text-align: center;
+    color: #fff;
   }
 
   .image {

@@ -77,7 +77,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.section}>
+        <section className={styles.section}  style={{ paddingBottom: '100px' }}>
           <div>
             <h2>Everything Matters</h2>
             <p>
@@ -252,7 +252,7 @@ export default function Home() {
           </div>
         </section>
         {/* red */}
-        <section className={styles.section}>
+        <section className={styles.section} style={{ paddingBottom: '100px' }}>
           <div>
             <div className={styles.image}>
               <ParallaxImage
@@ -303,7 +303,7 @@ export default function Home() {
           </div>
         </section> */}
 
-        <section className={styles.intro} style={{ marginTop: '100px' }}>
+        <section className={styles.intro} >
           <div className={styles.introText}>
             <h2>Thank you</h2>
           </div>
