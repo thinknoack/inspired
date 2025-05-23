@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
   basePath,
   assetPrefix,
   trailingSlash: true,
+  output: 'export',     
   images: {
     domains: ["images.unsplash.com"],
     unoptimized: true,
