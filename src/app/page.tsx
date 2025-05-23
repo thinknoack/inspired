@@ -3,12 +3,7 @@ import styles from "./page.module.scss";
 import ParallaxImage from "./components/ParallaxImage";
 
 
-const basePath =
-  typeof window !== "undefined" &&
-  window.location.pathname.startsWith("/inspired")
-    ? "/inspired"
-    : "";
-
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Home() {
 
