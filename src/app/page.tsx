@@ -12,14 +12,15 @@ import gas from '../../public/set/gas.jpg'
 import work from '../../public/set/work.jpg'
 import wall from '../../public/set/wall.jpg'
 import cross from '../../public/set/cross.jpg'
-import sit from '../../public/set/sit-work.jpg'
-import sit2 from '../../public/set/sit.jpg'
+import sit from '../../public/set/sit.jpg'
+import sit2 from '../../public/set/sit2.jpg'
 import dog from '../../public/set/dog.jpg'
-import stand from '../../public/set/stand.jpg'
+//import stand from '../../public/set/stand.jpg'
 import scroll from '../../public/set/scroll.jpg'
 import pond from '../../public/set/pond.jpg'
-import road from '../../public/set/road.jpg'
+//import road from '../../public/set/road.jpg'
 import signs from '../../public/set/signs.jpg'
+import signs2 from '../../public/set/sign2.jpg'
 import polls from '../../public/set/polls.jpg'
 
 
@@ -47,11 +48,10 @@ const imageData = [
   { src: signs, alt: "Various road signs", order: 8, vert: true },
   { src: polls, alt: "Polling station", order: 9, vert: true },
   { src: dog, alt: "dog", order: 10, vert: true },
+  { src: signs2, alt: "Polling station", order: 15 },
   { src: sit2, alt: "person sitting", order: 11 },
-  { src: stand, alt: "man standing", order: 12, vert: true },
   { src: scroll, alt: "Picture of a car near the train tracks", order: 13 },
   { src: pond, alt: "Various road signs", order: 14 },
-  { src: road, alt: "Polling station", order: 15 }
 ].sort((a, b) => a.order - b.order);
 
   return (
