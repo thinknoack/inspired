@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.scss";
-import ParallaxImage from "./components/ParallaxImage";
+import Image, { StaticImageData } from "next/image";
 
 import everything from '../../public/we/everything.jpg'
 import color from '../../public/we/color.jpg'
@@ -12,9 +12,13 @@ import gas from '../../public/set/gas.jpg'
 import work from '../../public/set/work.jpg'
 import wall from '../../public/set/wall.jpg'
 import cross from '../../public/set/cross.jpg'
-
-
 import sit from '../../public/set/sit-work.jpg'
+import sit2 from '../../public/set/sit.jpg'
+import dog from '../../public/set/dog.jpg'
+import stand from '../../public/set/stand.jpg'
+import scroll from '../../public/set/scroll.jpg'
+import pond from '../../public/set/pond.jpg'
+import road from '../../public/set/road.jpg'
 import signs from '../../public/set/signs.jpg'
 import polls from '../../public/set/polls.jpg'
 
@@ -23,15 +27,32 @@ import polls from '../../public/set/polls.jpg'
 // const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Home() {
+const doublehw = 1444;
+const doublehh = 508;
 
-  const doublehw = 8192
-  const doublehh = 2880
-
-  const doublevw = 5699
-  const doublevh = 4249
+const doublevw = 1444;
+const doublevh = 1076;
 
   const singlew = 5749
   const singleh = 3900
+  
+const imageData = [
+  { src: red, alt: "Red colored object", order: 1 },
+  { src: car, alt: "Picture of a car", order: 2 },
+  { src: gas, alt: "Gas station", order: 3 },
+  { src: work, alt: "People working", order: 4 },
+  { src: wall, alt: "Wall with graffiti", order: 5 },
+  { src: cross, alt: "Crosswalk", order: 6 },
+  { src: sit, alt: "Picture of a car near the train tracks", order: 7 },
+  { src: signs, alt: "Various road signs", order: 8 },
+  { src: polls, alt: "Polling station", order: 9 },
+  { src: dog, alt: "People working", order: 10 },
+  { src: sit2, alt: "Wall with graffiti", order: 11 },
+  { src: stand, alt: "Crosswalk", order: 12 },
+  { src: scroll, alt: "Picture of a car near the train tracks", order: 13 },
+  { src: pond, alt: "Various road signs", order: 14 },
+  { src: road, alt: "Polling station", order: 15 }
+].sort((a, b) => a.order - b.order);
 
   return (
     <div className={styles.page}>
@@ -62,16 +83,13 @@ export default function Home() {
               strangeness of everyday life.
             </p>
               <div className={styles.image}>
-                  <ParallaxImage
+                  <Image
                     src={color}
                     alt="Picture of a car near the train tracks"
                     width={doublehw}
                     height={doublehh}
-                    yParallaxAmount={-200}
-                    xParallaxAmount={0}
-                    startViewportFromBottom={0}
-                    endViewportFromTop={0}
-                    priority={true}
+                    priority
+                    unoptimized
                   />
               </div>
           </div>
@@ -86,16 +104,13 @@ export default function Home() {
             </p>
 
             <div className={styles.image}>
-                <ParallaxImage
+                <Image
                   src={everything}
                   alt="Picture of a car near the train tracks"
                   width={doublehw}
                   height={doublehh}
-                  yParallaxAmount={-200}
-                  xParallaxAmount={0}
-                  startViewportFromBottom={0}
-                  endViewportFromTop={0}
-                  priority={true}
+                  priority
+                  unoptimized
                 />
               </div>
         </div>
@@ -110,199 +125,21 @@ export default function Home() {
             </p>
           </div>
         </section>
-        {/* sit */}
-        <section className={styles.section}>
-          <div>
-            <div className={styles.image}>
-              <ParallaxImage
-                src={sit}
-                alt="Picture of a car near the train tracks"
-                width={doublevw}
-                height={doublevh}
-                yParallaxAmount={-200}
-                xParallaxAmount={0}
-                startViewportFromBottom={0}
-                endViewportFromTop={0}
-              />
-            </div>
-          </div>
-        </section>
-        {/* car */}
-        <section className={styles.section}>
-          <div>
-            <div className={styles.image}>
-              <ParallaxImage
-                src={car}
-                alt="Picture of a car near the train tracks"
-                width={singlew}
-                height={singleh}
-                yParallaxAmount={-200}
-                xParallaxAmount={0}
-                startViewportFromBottom={0}
-                endViewportFromTop={0}
-              />
-            </div>
-          </div>
-        </section>
-        {/* signs */}
-        <section className={styles.section}>
-          <div>
-            <div className={styles.image}>
-              <ParallaxImage
-                src={signs}
-                alt="Picture of a car near the train tracks"
-                width={doublevw}
-                height={doublevh}
-                yParallaxAmount={-200}
-                xParallaxAmount={0}
-                startViewportFromBottom={0}
-                endViewportFromTop={0}
-              />
-            </div>
-          </div>
-        </section>
-        
-        {/* Work */}
-        <section className={styles.section}>
-          <div>
-            <div className={styles.image}>
-              <ParallaxImage
-                src={work}
-                alt="Picture of a car near the train tracks"
-                width={singlew}
-                height={singleh}
-                yParallaxAmount={-200}
-                xParallaxAmount={0}
-                startViewportFromBottom={0}
-                endViewportFromTop={0}
-              />
-            </div>
-          </div>
-        </section>
-         {/* gas */}
-        <section className={styles.section}>
-          <div>
-            <div className={styles.image}>
-              <ParallaxImage
-                src={gas}
-                alt="Picture of a car near the train tracks"
-                width={singlew}
-                height={singleh}
-                yParallaxAmount={-200}
-                xParallaxAmount={0}
-                startViewportFromBottom={0}
-                endViewportFromTop={0}
-              />
-            </div>
-          </div>
-        </section>
-        {/* cross */}
-        <section className={styles.section}>
-          <div>
-            <div className={styles.image}>
-              <ParallaxImage
-                src={cross}
-                alt="Picture of a car near the train tracks"
-                width={singlew}
-                height={singleh}
-                yParallaxAmount={-200}
-                xParallaxAmount={0}
-                startViewportFromBottom={0}
-                endViewportFromTop={0}
-              />
-            </div>
-          </div>
-        </section>
 
-        {/* wall */}
-        <section className={styles.section}>
-          <div>
-            <div className={styles.image}>
-              <ParallaxImage
-                src={wall}
-                alt="Picture of a car near the train tracks"
-                width={singlew}
-                height={singleh}
-                yParallaxAmount={-200}
-                xParallaxAmount={0}
-                startViewportFromBottom={0}
-                endViewportFromTop={0}
-              />
-            </div>
-          </div>
-        </section>
-
-
-
-        {/* polls */}
-        <section className={styles.section}>
-          <div>
-            <div className={styles.image}>
-              <ParallaxImage
-                src={polls}
-                alt="Picture of a car near the train tracks"
-                width={doublevw}
-                height={doublevh}
-                yParallaxAmount={-200}
-                xParallaxAmount={0}
-                startViewportFromBottom={0}
-                endViewportFromTop={0}
-              />
-            </div>
-          </div>
-        </section>
-        {/* red */}
-        <section className={styles.section} style={{ paddingBottom: '100px' }}>
-          <div>
-            <div className={styles.image}>
-              <ParallaxImage
-                src={red}
-                alt="Picture of a car near the train tracks"
-                width={singlew}
-                height={singleh}
-                yParallaxAmount={-200}
-                xParallaxAmount={0}
-                startViewportFromBottom={0}
-                endViewportFromTop={0}
-              />
-            </div>
-          </div>
-        </section>
-
-
-
-
-        {/* <section className={`${styles.section} ${styles.double}`}>
-          <div>
-            <div className={styles.images}>
-            <div className={styles.image}>
-              <ParallaxImage
-                src={self}
-                alt="Tricycle placeholder"
-                width={singlew}
-                height={4049}
-                yParallaxAmount={-200}
-                xParallaxAmount={0}
-                startViewportFromBottom={0}
-                endViewportFromTop={0}
-              />
-            </div>
-            <div className={styles.image}>
-              <ParallaxImage
-                src={leave}
-                alt="Sidewalk placeholder"
-                width={singlew}
-                height={4049}
-                yParallaxAmount={-200}
-                xParallaxAmount={0}
-                startViewportFromBottom={0}
-                endViewportFromTop={0}
-              />
-            </div>
-            </div>
-          </div>
-        </section> */}
-
+{imageData.map((item, index) => (
+  <section className={styles.section} key={index}>
+    <div>
+      <div className={styles.imageVert}>
+        <Image
+          src={item.src}
+          alt={item.alt}
+          width={doublevw}
+          height={doublevh}
+        />
+      </div>
+    </div>
+  </section>
+))}
         <section className={styles.intro} >
           <div className={styles.introText}>
             <h2>Thank you</h2>

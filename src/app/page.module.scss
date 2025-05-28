@@ -9,7 +9,7 @@
   align-items: center;
   flex-direction: column;
   background-color: #a9b5b8;
-    background-image: url("../../public/webb-dark.png");
+  background-image: url("../../public/webb-dark.png");
   background-repeat: repeat; /* or 'no-repeat', 'repeat-x', etc. */
   background-size: auto; /* or 'cover', 'contain', etc. */
   background-position: top left; /* adjust as needed */
@@ -20,21 +20,19 @@
 }
 
 .heading {
-    font-size: 1.5rem;
-    margin-bottom: 0;
-    text-align: center;
-    text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
 }
-
 
 .intro {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-    background-color: #fff;
+  background-color: #fff;
   padding: 2rem;
-  
 }
 
 .introText {
@@ -54,7 +52,6 @@
   align-items: center;
   justify-content: center;
   padding: 50px;
-  min-height: 80vh;
   background-color: #101010bc;
 
   h2 {
@@ -70,23 +67,34 @@
     text-align: center;
     color: #fff;
   }
-
-  .image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-      max-width: 1800px;
-      width: 70%;
-      margin: 0 auto;
-    :global(img) {
-      filter: none;
-      mix-blend-mode: normal;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border: 0;
-      box-shadow:1px 1px 20px -6px #00000067;
-    }
+.image,
+.imageVert {
+  img {
+    width: 100%;         // fills container, scales down
+    max-width: 1444px;   // hard cap on max width
+    height: auto;        // preserves aspect ratio
+    max-height: 90vh;    // (optional) limit height for tall screens
+    margin: 0 auto;
+    display: block;
   }
+}
+
+  // .image {
+  //   flex: 1;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //     max-width: 1800px;
+  //     width: 70%;
+  //     margin: 0 auto;
+  //   :global(img) {
+  //     filter: none;
+  //     mix-blend-mode: normal;
+  //     width: 100%;
+  //     height: auto;
+  //     object-fit: cover;
+  //     border: 0;
+  //     box-shadow:1px 1px 20px -6px #00000067;
+  //   }
+  // }
 }
