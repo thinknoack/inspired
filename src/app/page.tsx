@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.scss";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 import everything from '../../public/we/everything.jpg'
 import color from '../../public/we/color.jpg'
@@ -33,22 +33,22 @@ const doublehh = 508;
 const doublevw = 1444;
 const doublevh = 1076;
 
-  const singlew = 5749
-  const singleh = 3900
+  const singlew = 1444
+  const singleh = 980
   
 const imageData = [
-  { src: red, alt: "Red colored object", order: 1 },
+  { src: red, alt: "Red colored object", order: 1},
   { src: car, alt: "Picture of a car", order: 2 },
   { src: gas, alt: "Gas station", order: 3 },
   { src: work, alt: "People working", order: 4 },
   { src: wall, alt: "Wall with graffiti", order: 5 },
   { src: cross, alt: "Crosswalk", order: 6 },
-  { src: sit, alt: "Picture of a car near the train tracks", order: 7 },
-  { src: signs, alt: "Various road signs", order: 8 },
-  { src: polls, alt: "Polling station", order: 9 },
-  { src: dog, alt: "People working", order: 10 },
-  { src: sit2, alt: "Wall with graffiti", order: 11 },
-  { src: stand, alt: "Crosswalk", order: 12 },
+  { src: sit, alt: "Picture of a car near the train tracks", order: 7, vert: true },
+  { src: signs, alt: "Various road signs", order: 8, vert: true },
+  { src: polls, alt: "Polling station", order: 9, vert: true },
+  { src: dog, alt: "dog", order: 10, vert: true },
+  { src: sit2, alt: "person sitting", order: 11 },
+  { src: stand, alt: "man standing", order: 12, vert: true },
   { src: scroll, alt: "Picture of a car near the train tracks", order: 13 },
   { src: pond, alt: "Various road signs", order: 14 },
   { src: road, alt: "Polling station", order: 15 }
@@ -133,8 +133,8 @@ const imageData = [
         <Image
           src={item.src}
           alt={item.alt}
-          width={doublevw}
-          height={doublevh}
+          width={item.vert ? doublevw : singlew}
+          height={item.vert ? doublevh: singleh}
         />
       </div>
     </div>
