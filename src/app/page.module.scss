@@ -10,9 +10,10 @@
   flex-direction: column;
   background-color: #a9b5b8;
   background-image: url("../../public/webb-dark.png");
-  background-repeat: repeat; /* or 'no-repeat', 'repeat-x', etc. */
-  background-size: auto; /* or 'cover', 'contain', etc. */
-  background-position: top left; /* adjust as needed */
+  background-repeat: repeat; 
+  background-size: auto;
+  background-position: top left; 
+  background-attachment: fixed;
 }
 
 .main {
@@ -52,7 +53,8 @@
   align-items: center;
   justify-content: center;
   padding: 50px;
-  background-color: #101010bc;
+  background-color: #0000000d;
+  backdrop-filter: contrast(1) blur(1px);
 
   h2 {
     font-size: 1.5rem;
