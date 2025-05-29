@@ -10,17 +10,17 @@ import red from '../../public/set/red.jpg'
 import car from '../../public/set/car.jpg'
 import gas from '../../public/set/gas.jpg'
 import work from '../../public/set/work.jpg'
-import wall from '../../public/set/wall.jpg'
+//import wall from '../../public/set/wall.jpg'
 import cross from '../../public/set/cross.jpg'
 import sit from '../../public/set/sit.jpg'
-import sit2 from '../../public/set/sit2.jpg'
-import dog from '../../public/set/dog.jpg'
+//import sit2 from '../../public/set/sit2.jpg'
+//import dog from '../../public/set/dog.jpg'
 //import stand from '../../public/set/stand.jpg'
 import scroll from '../../public/set/scroll.jpg'
 import pond from '../../public/set/pond.jpg'
 //import road from '../../public/set/road.jpg'
 import signs from '../../public/set/signs.jpg'
-import signs2 from '../../public/set/sign2.jpg'
+//import signs2 from '../../public/set/sign2.jpg'
 import polls from '../../public/set/polls.jpg'
 
 
@@ -40,18 +40,14 @@ const doublevh = 1076;
 const imageData = [
   { src: red, alt: "Red colored object", order: 1},
   { src: car, alt: "Picture of a car", order: 2 },
-  { src: gas, alt: "Gas station", order: 3 },
-  { src: work, alt: "People working", order: 4 },
-  { src: wall, alt: "Wall with graffiti", order: 5 },
-  { src: cross, alt: "Crosswalk", order: 6 },
-  { src: sit, alt: "Picture of a car near the train tracks", order: 7, vert: true },
-  { src: signs, alt: "Various road signs", order: 8, vert: true },
-  { src: polls, alt: "Polling station", order: 9, vert: true },
-  { src: dog, alt: "dog", order: 10, vert: true },
-  { src: signs2, alt: "Polling station", order: 15 },
-  { src: sit2, alt: "person sitting", order: 11 },
-  { src: scroll, alt: "Picture of a car near the train tracks", order: 13 },
-  { src: pond, alt: "Various road signs", order: 14 },
+  { src: polls, alt: "Polls", order: 3, vert: true },
+  { src: gas, alt: "Gas station", order: 4 },
+  { src: work, alt: "People working", order: 5 },
+  { src: sit, alt: "Sitting", order: 6, vert: true },
+  { src: signs, alt: "Various road signs", order: 7, vert: true },
+  { src: cross, alt: "Crosswalk", order: 8 },
+  { src: scroll, alt: "Picture of a car near the train tracks", order: 9 },
+  { src: pond, alt: "Various road signs", order: 10 },
 ].sort((a, b) => a.order - b.order);
 
   return (
