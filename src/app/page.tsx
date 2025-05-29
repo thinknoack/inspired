@@ -54,7 +54,7 @@ const imageData = [
     <div className={styles.page}>
       <main className={styles.main}>
         {/* New full-screen intro section */}
-        <section className={styles.intro}>
+        <section className={styles.intro +' '+ styles.altbg}>
           <div className={styles.introText}>
             <h1 className={styles.heading}>Inspired by William Eggleston</h1>
             <p>
@@ -71,7 +71,7 @@ const imageData = [
           </div>
         </section>
 
-       <section className={styles.section}>
+       <section className={styles.section+' '+ styles.whitebg}>
           <div>
             <h2>Color in the Everyday</h2>
             <p>
@@ -91,7 +91,7 @@ const imageData = [
           </div>
         </section>
 
-        <section className={styles.section}  style={{ paddingBottom: '100px' }}>
+        <section className={styles.section+' '+ styles.altbg} style={{ paddingBottom: '100px' }}>
           <div>
             <h2>Everything Matters</h2>
             <p>
@@ -136,7 +136,7 @@ const imageData = [
     </div>
   </section>
 ))}
-        <section className={styles.intro} >
+        <section className={styles.intro + ' ' + styles.nobg} >
           <div className={styles.introText}>
             <h2>Thank you</h2>
           </div>
