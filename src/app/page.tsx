@@ -79,7 +79,7 @@ export default function Home() {
             <p>
               William Eggleston (b. 1939) is a groundbreaking photographer based
               in the South, known for his dapper Southern style, love of music
-              and whisky, and as curt as his photographs... often shooting just
+              and whisky, and is curt as his photographs... often shooting just
               one frame per subject, trusting his instinct. He describes his
               process as a “democratic vision,” giving equal weight to the
               ordinary and overlooked. His images, like his life, are rich with
