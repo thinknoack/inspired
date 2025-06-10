@@ -197,11 +197,6 @@ export default function Home() {
                   height={item.vert ? doublevh : singleh}
                 />
               </div>
-              {/* <span className={styles.caption}>
-                <span>
-                  <em>{item.caption}</em>
-                </span>
-              </span> */}
             </div>
           </section>
         ))}
