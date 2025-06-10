@@ -79,17 +79,19 @@ export default function Home() {
             <p>
               William Eggleston (b. 1939) is a groundbreaking photographer based
               in the South, known for his dapper Southern style, love of music
-              and whisky, and is as curt as his photographs... often shooting just
-              one frame per subject, trusting his instinct. He describes his
-              process as a “democratic vision,” giving equal weight to the
-              ordinary and overlooked. His images, like his life, are rich with
-              precision, tension, and mystery.
+              and whiskey, and a demeanor as curt as his photographs. He often
+              shoots just one frame per subject, trusting his instinct. He
+              describes his process as a “democratic vision,” giving equal
+              weight to the ordinary and overlooked. His images, like his life,
+              are vividly rich, full of tension, and imbued with mystery.
             </p>
           </div>
         </section>
         <section className={styles.intro + " " + styles.altbg}>
           <div className={styles.introText}>
-            <h2 className={styles.heading}>&ldquo;The worst show of the year&rdquo;</h2>
+            <h2 className={styles.heading}>
+              &ldquo;The worst show of the year&rdquo;
+            </h2>
 
             <p>
               In 1976, Eggleston made history with the first solo color
@@ -100,13 +102,17 @@ export default function Home() {
               called it “the worst show of the year,” and even Ansel Adams wrote
               a letter expressing his disdain. Yet Eggleston’s lush dye-transfer
               prints brought emotional depth and cinematic weight to everyday
-              scenes. Some claim he is one of the most influential photographers of
-              the latter half of the 20th century.
+              scenes. Some claim he is one of the most influential photographers
+              of the latter half of the 20th century.
             </p>
           </div>
         </section>
 
-        <section className={styles.section + " " + styles.fullHeight + " " + styles.whitebg}>
+        <section
+          className={
+            styles.section + " " + styles.fullHeight + " " + styles.whitebg
+          }
+        >
           <div>
             <h2>Color in the Everyday</h2>
             <p>
@@ -125,13 +131,13 @@ export default function Home() {
               />
             </div>
             <span className={styles.caption}>
-              <span style={{width: "40%"}}>
+              <span style={{ width: "40%" }}>
                 <em>Greenwood, Mississippi (Red Ceiling)</em>
               </span>
-               <span style={{width: "20%"}}>
+              <span style={{ width: "20%" }}>
                 <em>Untitled</em>
               </span>
-              <span style={{width: "40%"}}>
+              <span style={{ width: "40%" }}>
                 <em>Untitled (The Outlands)</em>
               </span>
             </span>
@@ -139,7 +145,10 @@ export default function Home() {
         </section>
 
         <section
-          className={styles.section + " " + styles.fullHeight + " " + styles.altbg}        >
+          className={
+            styles.section + " " + styles.fullHeight + " " + styles.altbg
+          }
+        >
           <div>
             <h2>Everything Matters</h2>
             <p>
@@ -160,15 +169,14 @@ export default function Home() {
               />
             </div>
             <span className={styles.caption}>
-              <span style={{width: "40%"}}>
+              <span style={{ width: "40%" }}>
                 <em>Untitled (Tricycle and Memphis)</em>
               </span>
-              <span style={{width: "20%"}}>
-               <em>Untitled</em>
+              <span style={{ width: "20%" }}>
+                <em>Untitled</em>
               </span>
-              <span style={{width: "40%"}}>
+              <span style={{ width: "40%" }}>
                 <em>Untitled (Louisiana/Green Car, Green Xox)</em>
-                
               </span>
             </span>
           </div>
@@ -177,9 +185,9 @@ export default function Home() {
           <div className={styles.introText}>
             <h2 className={styles.heading}>A response by Gregory Noack</h2>
             <p>
-              I’m drawn to how Eggleston finds beauty in the mundane. In
-              these images, I’ve tried to echo his eye for color and his
-              unflinching attention to the everyday.
+              I’m drawn to how Eggleston finds beauty in the mundane. In these
+              images, I’ve tried to echo his eye for color and his unflinching
+              attention to the everyday.
             </p>
           </div>
         </section>
@@ -206,6 +214,7 @@ export default function Home() {
         <section className={styles.intro + " " + styles.nobg}>
           <div className={styles.introText}>
             <h2>Thank you</h2>
+            <p>Gregory Noack</p>
           </div>
         </section>
       </main>
