@@ -9,17 +9,11 @@ import red from "../../public/set/red.jpg";
 import car from "../../public/set/car.jpg";
 import gas from "../../public/set/gas.jpg";
 import work from "../../public/set/work.jpg";
-//import wall from '../../public/set/wall.jpg'
 import cross from "../../public/set/cross.jpg";
 import sit from "../../public/set/sit.jpg";
-//import sit2 from '../../public/set/sit2.jpg'
-//import dog from '../../public/set/dog.jpg'
-//import stand from '../../public/set/stand.jpg'
 import scroll from "../../public/set/scroll.jpg";
 import pond from "../../public/set/pond.jpg";
-//import road from '../../public/set/road.jpg'
 import signs from "../../public/set/signs.jpg";
-//import signs2 from '../../public/set/sign2.jpg'
 import polls from "../../public/set/polls.jpg";
 
 // const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -213,8 +207,7 @@ export default function Home() {
         ))}
         <section className={styles.intro + " " + styles.nobg}>
           <div className={styles.introText}>
-            <h2>Thank you</h2>
-            <p>Gregory Noack</p>
+            <p>Inspired Project, by Gregory Noack</p>
           </div>
         </section>
       </main>
